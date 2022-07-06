@@ -1,116 +1,201 @@
 .container {
-  padding: 0 2rem;
+  background: var(--very-pale-blue);
+  height: 100vh;
+  position: relative;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.customShapeDividerTop1657075072 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.customShapeDividerTop1657075072 svg {
+  position: relative;
+  display: block;
+  width: calc(157% + 1.3px);
+  height: 271px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.shapeFill {
+  fill: var(--pale-blue);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.orderCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.summaryWrapper {
+  padding: 25px;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.heading {
+  color: var(--dark-blue);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
-.title,
 .description {
   text-align: center;
-}
+  font-size: 16px;
+  color: var(--desaturate-blue);
+  padding-bottom: 15px;
 
-.description {
-  margin: 4rem 0;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+.itemWrapper {
+  background-color: var(--very-pale-blue);
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 25px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.planInfoWrapper {
+  display: flex;
+  align-items: stretch;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.planInfoWrapper:nth-child(2) {
+  border: 1px solid red;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.planInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-left: 20px;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.name {
+  font-weight: 700;
+  color: var(--dark-blue);
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.price {
+  color: var(--desaturate-blue);
+}
+
+.action {
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.action:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.paymentBtn {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 12px 15px rgb(56, 41, 224, 0.3);
+}
+
+.paymentBtn:hover {
+  opacity: 0.6;
+}
+
+.cancel {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.cancelText {
+  font-weight: 700;
+  color: var(--desaturate-blue);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cancelText:hover {
+  color: var(--dark-blue);
+}
+
+@media (max-width: 440px) {
+  .orderCard {
+    width: 300px;
+  }
+
+  .summaryWrapper {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .description {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .itemWrapper {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 95%;
+  }
+
+  .paymentBtn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .cancel {
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  .cancelText {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .orderCard {
+    width: 220px;
+    border-radius: 10px;
+  }
+
+  .itemWrapper {
+    flex-direction: column;
+  }
+
+  .planInfoWrapper {
     flex-direction: column;
   }
 }
